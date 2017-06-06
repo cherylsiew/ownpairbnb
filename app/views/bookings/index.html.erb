@@ -1,0 +1,17 @@
+<% @bookings.each do |b| %>
+	<% if b.listing.photos.size > 0 %>
+		<% b.listing.photos.each do |p| %><br>
+			<%= image_tag(p.finger.url)%><br>
+		<% end %>
+	<% end %>
+
+	<%= b.listing.id%> <%= b.listing.Property_Type%><br>
+	<%= b.listing.Property_Name%> <%= b.listing.islands%><br>
+	<%= b.listing.country%> <%= b.listing.currency%><br>
+	<%= b.listing.price_per_day%> <%= b.total_price%><br>
+	<%= button_to "Make Payment", braintree_path(b.id), method: :get %>
+<% end %>	
+
+
+
+

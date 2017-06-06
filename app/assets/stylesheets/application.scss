@@ -1,0 +1,174 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.navbar-inverse {
+	background-color: white;
+	border-bottom: 1px solid black;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-radius: 0px;
+	border-color: #c0c0c0;
+	margin-bottom: 0px;
+	height: 60px;
+}
+.navbar-header{
+	padding-top: 12px;
+}
+.navbar-logo {
+	font-family: Monoton;
+	font-weight: bold;
+	color: #ff4500;	
+	font-size: 18px;
+}
+.glyphicon{
+	color: #ff4500;
+	height: 15px;
+}
+.nav{
+	padding: 0px 0px 0px 20px;
+}
+.navbar-inverse .navbar-nav>li>a{
+	color:black;
+	font-size: 17px;
+	font-weight: medium;
+	font-family: Lato;
+}
+.navbar-inverse .navbar-nav>li>a:hover{
+	color:black;
+}
+.navbar-right{
+	padding-top: 8px;
+}
+.navbar-right a{
+	color: black;
+	font-family: Lato;
+	font-size: 17px;
+}
+.container-background{
+	text-align: center;
+	border-bottom: 1px solid #c0c0c0;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	margin-bottom: 0px;
+	padding: 0px 0px 0px 0px;
+	height: 0px;
+}
+.navbar{
+	margin-bottom: 0px;
+	background: rgba(255,255,255,0.6);
+	padding: 5px;
+}
+.choice{
+	color: black;
+	font-family: Lato;
+	padding: 0px 10px 10px 10px;
+}
+.choice select {
+	font-family: Lato;
+	font-size: 14px;
+	padding: 0px 10px 10px 10px;
+}
+.choice input {
+	font-family: Lato;
+	font-size: 14px;
+	padding: 0px 10px 5px 10px;
+}
+.choice button {
+	font-family: Lato;
+	font-size: 14px;
+	padding: 3px 24px 6px 24px;
+	background-color: #ff4500;
+	font-weight: medium;
+	color: white;
+	margin-left: 5px;
+}
+.menu-right{
+	text-align: right;
+	font-family: Lato;
+	color: black;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 5px;
+}
+.mySlides {display:none}
+
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+.mySlides container-background{
+	height:30px;
+}
+
+
+.body-para{
+	text-align: center;
+	font-family: Lato;
+	font-weight: bold;
+	color: white;
+	margin: 0;
+  	position: absolute;
+  	top: 40%;
+  	left: 28%;
+}
+
+.sign-up h2{
+	color: #ee3b54;
+}
+
+.sign-up{
+	padding: 0px 0px 0px 70px
+}
+
+.pagination {
+	color:#ee3b54;
+	font-weight: bold;
+	font-family: Georgia;
+	font-size: 14px;
+	padding: 0px 0px 0px 50px;
+}
+
+.pagination a {
+	color:#ee3b54;
+	font-weight: bold;
+	font-family: Georgia;
+	font-size: 14px;
+	padding: 0px 0px 0px 50px;
+}
+
+.black {
+	color: black;
+}
+
+.white{
+	color: white;
+}
+
+.submit-field-box {
+	color: black;
+	font-family: Georgia;
+	font-size: 14px;
+	padding: 0px 0px 0px 15px;
+}
+
+.form-group {
+	font-family: Georgia;
+	font-size: 14px;
+}

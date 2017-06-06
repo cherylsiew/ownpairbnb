@@ -9,6 +9,20 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.0'
 gem 'clearance'
+gem 'figaro'
+gem 'braintree'
+
+#bootstrap
+gem 'bootstrap'
+gem 'bootstrap-sass'
+gem 'faker'
+gem 'kaminari'
+gem 'carrierwave'
+gem "mini_magick"
+gem "fog"
+
+gem 'omniauth'
+gem 'omniauth-facebook'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server

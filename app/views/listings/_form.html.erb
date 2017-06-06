@@ -1,0 +1,159 @@
+  
+<form class="form-horizontal">
+  <div class="form-group">
+    <label for="Property_Name" class="col-sm-2 control-label">Property Name:</label>
+    <div class="col-sm-4">
+      <input type="Property_Name" class="form-control" id="Property_Name" placeholder="Property Name">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="Property_Type" class="col-sm-2 control-label">Property Type:</label>
+    <div class="col-sm-4">
+      <select class="form-control" id="Property_Type">
+        <option>Villa</option>
+        <option>Hotel</option>
+        <option>Hostel</option>
+        <option>Chalet</option>
+      </select>
+    </div>  
+  </div>
+<br>
+  
+   <div class="form-group">
+    <label for="Address1" class="col-sm-2 control-label">Address 1:</label>
+    <div class="col-sm-4">
+      <input type="Address1" class="form-control" id="Address1" placeholder="Address1">
+    </div>
+  </div>
+
+     <div class="form-group">
+    <label for="Address2" class="col-sm-2 control-label">Address 2:</label>
+    <div class="col-sm-4">
+      <input type="Address2" class="form-control" id="Address2" placeholder="Address2">
+    </div>
+  </div>
+  <br>
+
+   <div class="form-group">
+    <label for="postcode" class="col-sm-2 control-label">Postcode:</label>
+    <div class="col-sm-4">
+      <input type="Postcode" class="form-control" id="Postcode" placeholder="Postcode">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="country" class="col-sm-2 control-label">Country:</label>
+    <div class="col-sm-4">
+      <select class="form-control" id="country">
+        <option>Malaysia</option>
+        <option>Singapore</option>
+        <option>Thailand</option>
+        <option>Indonesia</option>
+      </select>
+    </div>  
+  </div>
+  <br>
+
+   <div class="form-group">
+    <label for="islands" class="col-sm-2 control-label">Islands:</label>
+    <div class="col-sm-4">
+      <select class="form-control" id="islands">
+        <option>Langkawi</option>
+        <option>Redang</option>
+        <option>Rawa</option>
+        <option>Perhentian</option>
+        <option>Layang-Layang</option>
+        <option>Sipadan</option>
+        <option>Bali</option>
+        <option>Lombok</option>
+        <option>Phuket</option>
+        <option>Koh Phi Phi</option>
+        <option>Koh Lanta</option>
+        <option>Koh Samui</option>
+        <option>Batam</option>
+      </select>
+    </div>  
+  </div>
+
+  <div class="form-group">
+    <label for="currency" class="col-sm-2 control-label">Currency:</label>
+    <div class="col-sm-4">
+      <select class="form-control" id="currency">
+        <option>MYR</option>
+        <option>THB</option>
+        <option>IDR in million</option>
+        <option>SGD</option>
+      </select>
+    </div>  
+  </div>
+  <br>
+
+  <div class="form-group">
+    <label for="No_of_rooms" class="col-sm-2 control-label">Number of Rooms:</label>
+    <div class="col-sm-4">
+      <input type="No_of_rooms" class="form-control" id="No_of_rooms" placeholder="Number of Rooms">
+    </div>  
+  </div>
+
+  <div class="form-group">
+    <label for="No_of_beds" class="col-sm-2 control-label">Number of Beds:</label>
+    <div class="col-sm-4">
+      <input type="No_of_beds" class="form-control" id="No_of_beds" placeholder="Number of Beds">
+    </div> 
+  </div>
+  <br>
+
+  <div class="form-group">
+    <label for="No_of_bathrooms" class="col-sm-2 control-label">Number of Bathrooms:</label>
+    <div class="col-sm-4">
+      <input type="No_of_bathrooms" class="form-control" id="No_of_bathrooms" placeholder="Number of Bathrooms">
+    </div>  
+  </div>
+
+  <div class="form-group">
+    <label for="Price_per_day" class="col-sm-2 control-label">Price per day:</label>
+    <div class="col-sm-4">
+      <input type="price_per_day" class="form-control" id="price_per_day" placeholder="Price per day">
+    </div> 
+  </div>
+  <br>
+
+  <div class="form-group">
+    <label for="Price_per_week" class="col-sm-2 control-label">Price per week:</label>
+    <div class="col-sm-4">
+      <input type="price_per_week" class="form-control" id="price_per_week" placeholder="Price per week">
+    </div> 
+  </div>
+
+  <div class="form-group">
+    <label for="Price_per_calendar_month" class="col-sm-2 control-label">Price per cal mth:</label>
+    <div class="col-sm-4">
+      <input type="price_per_calendar_month" class="form-control" id="price_per_calendar_month" placeholder="Price per calendar month">
+    </div> 
+  </div>
+  <br>
+
+  <div class="form-group">
+    <label for="smoking?" class="col-sm-2 control-label">Smoking:</label>
+    <div class="col-sm-4">
+      <select class="form-control" id="smoking?">
+        <option>0</option>
+        <option>1</option>
+      </select>
+    </div>  
+  </div>
+
+<div class ="photo-upload-button">
+  <div class=class="col-sm-2 control-label">
+    <div class="col-sm-4">
+      <%= form.file_field :photos, multiple: true %>
+    </div>
+  </div>
+</div>
+  <br>
+  <br>
+
+
+
+

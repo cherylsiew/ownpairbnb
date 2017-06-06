@@ -1,0 +1,18 @@
+<h1>Successful Bookings</h1>
+
+<% if @booking.listing.photos.size > 0 %>
+		<% @booking.listing.photos.each do |p| %><br>
+			<%= image_tag(p.finger.url)%><br>
+		<% end %>
+
+<% end %>
+<br> Booking ID: <%= @booking.id%>, Property Name: <%= @listing.Property_Name%>, Property Type: <%= @listing.Property_Type%><br>
+Islands: <%= @listing.islands%>, Country: <%= @listing.country%>, Currency: <%= @listing.currency%><br>
+Price Per Day: <%= @listing.price_per_day%>, Total Price: <%= @booking.total_price%><br> 
+
+Transaction ID: <%= @booking.transaction_id %><br>
+Booking Status: <%= @booking.transaction_status %><br>
+Card number: xxxx-xxxx-xxxx-<%= @booking.fourdigits %><br>
+
+
+

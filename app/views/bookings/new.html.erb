@@ -1,0 +1,11 @@
+  <%= form_for [@listing,@booking]  do |form| %>
+    <%= render partial: '/bookings/form', object: form %>
+
+
+Price per day:<%=@listing.price_per_day %>
+       <div class="submit-field-box">
+	   <%= form.submit "Book Now" %>
+	   </div>
+
+	  <%end%>
+

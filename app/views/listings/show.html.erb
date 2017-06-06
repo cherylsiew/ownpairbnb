@@ -1,0 +1,14 @@
+<h1>My Listings</h1>
+
+
+<% if @listing.photos.size > 0 %>
+	<% @listing.photos.each do |p| %>
+		<%= image_tag(p.finger.url)%>
+	<% end %>
+<% end %>
+<%= @listing.Property_Name%>
+<%= @listing.Property_Type%>
+<%= @listing.islands%>
+<%= @listing.country%>
+<%= @listing.currency%>
+<%= @listing.price_per_day%>
