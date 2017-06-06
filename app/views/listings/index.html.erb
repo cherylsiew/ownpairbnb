@@ -1,0 +1,28 @@
+<div class="container_2">
+<ol>
+<% if @user = current_user %>
+	<% @listings.each do |l| %>
+		<% l.photos.each do |x| %>
+		<%= image_tag x.finger.url unless l.photos.empty? %>
+		<%end%>
+		<li><%= l.Property_Name + " , " + l.islands + " , " + l.country + " , " + l.verification.to_s %>
+		 <%= button_to "Edit", edit_listing_path(l), method: :get, class: 'black'%>
+		 <%= button_to "Book Now", new_listing_booking_path(l), method: :get,class: 'black'%>
+		<% if current_user.superadmin? || current_user.moderator? %>
+			<%= button_to "Verify", listing_path(l), method: :patch %>
+		<%end%>
+		</li>
+	<% end %>
+
+<% else %>
+	<% @listings.each do |l| %>
+		<% l.photos.each do |x| %>
+		<%= image_tag x.finger.url unless l.photos.empty? %>
+		<%end%>
+		<li><%= l.Property_Name + " , " + l.islands + " , " + l.country + " , " + l.verification.to_s %>
+	<%end %>
+<% end %>
+</ol>
+</div>
+
+<%= paginate @listings %>

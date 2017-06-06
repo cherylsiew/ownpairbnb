@@ -1,0 +1,9 @@
+
+  <%= form_for @booking do |form| %>
+    <%= render partial: '/bookings/form', object: form %>
+
+       <div class="submit-field-box">
+	   <%= form.submit "Update Booking" %>
+	   </div>
+
+	  <%end%>

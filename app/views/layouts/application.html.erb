@@ -1,26 +1,73 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Ownpairbnb</title>
-    <%= csrf_meta_tags %>
+<head>
+  
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+ 
+  <link href='https://fonts.googleapis.com/css?family=Monoton' rel='stylesheet'>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- a) jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- b) bootstrap.min.js -->
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- c) braintree.js -->
+  <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
+  <!-- d) fontawesome.js -->
+  <script src="https://use.fontawesome.com/b470fc1405.js"></script>
 
-  <body>
-  <% if signed_in? %>
-      Signed in as: <%= current_user.email %>
-      <%= button_to 'Sign out', sign_out_path, method: :delete %>
-    <% else %>
-      <%= link_to 'Sign in', sign_in_path %>
-    <% end %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_120.js" async=""></script>
+  <script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/element/TE_20170501_01/e/js/element/element_main.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/translate_static/js/element/main.js"></script>
+  <link type="text/css" rel="stylesheet" charset="UTF-8" href="https://translate.googleapis.com/translate_static/css/translateelement.css">
+  <link type="text/css" href="https://www.google.com/cse/static/style/look/v2/default.css" rel="stylesheet">
 
-    <div id="flash">
-      <% flash.each do |key, value| %>
-        <div class="flash <%= key %>"><%= value %></div>
-      <% end %>
+
+  <%= csrf_meta_tag %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    <span class="glyphicon glyphicon-record"></span>
+    <a class="navbar-logo" href="#">SURIASURIA</a>
+    <span class="glyphicon glyphicon-record"></span>
     </div>
-    <%= yield %>
-  </body>
+    <ul class="nav navbar-nav">
+      <li class="homebutton"> <%= link_to "Home", root_path %></li>
+      <li><a href="#">Deals</a></li>
+      <li><a href="#">Become A Host</a></li>
+      <li><%= link_to "Listings", listings_path %></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    <div id="login-info">
+      <% if signed_in? -%>
+       <%= image_tag current_user.avatar.thumb.url || 'thumb_duck.jpeg' %>
+        <%= link_to t(".sign_out"), sign_out_path, method: :delete%>
+        <%= link_to "My Bookings", user_bookings_path(current_user)%>
+        <%= link_to t(".edit_user"), edit_user_path(current_user), method: :get%>
+      <% else -%>
+        <%= link_to "Sign In via Facebook |", "/auth/facebook", {:style=>'color:  #8b9dc3;'} %>
+        <%= link_to t(".sign_in"), sign_in_path,{:style=>'color:#f4524d;'} %>
+        <%= link_to t(".sign_up"), sign_up_path,{:style=>'color:#f4524d'} %>
+      <% end -%>
+      </div>
+      </ul>
+  </nav>
+
+  </div>
+</nav>
+
+
+<%= yield %>
+
+</body>
+
 </html>

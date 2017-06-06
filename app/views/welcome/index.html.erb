@@ -1,0 +1,62 @@
+
+<div class="container-background">
+
+  <div class="navbar navbar-inverse-two">
+    <div class="choice">
+      <tr>
+      <td>
+      <span class="glyphicon glyphicon-search"></span>
+      </td>
+      <td>
+      <select style="height:2.2em;"> 
+      <option value="Langkawi">Langkawi</option>
+      <option value="Tioman">Tioman</option>
+      <option value="Rawa">Rawa</option>
+      <option value="Perhentian">Perhentian</option>
+      <option value="Redang">Redang</option>
+      <option value="Layang-Layang">Layang-Layang</option>
+      <option value="Sipadan">Sipadan</option>
+      <option value="Bali">Bali</option>
+      <option value="Lombok">Lombok</option>
+      <option value="Phuket">Phuket</option>
+      <option value="Koh Samui">Koh Samui</option>
+      <option value="Koh Phi Phi">Koh Phi Phi</option>
+      <option value="Koh Lanta">Koh Lanta</option>
+      <option value="Batam">Batam</option>
+      </select>
+      </td>
+      <td>Check In:</td>
+      <td><input type="date"></td>
+      <td>Check Out:</td>
+      <td><input type="date"></td>
+      <button>Search</button>
+      </tr>
+     </div>
+    </div>
+  </div>
+
+    <div class="slideshow">
+    <%= image_tag "Bali_Slide1.jpg",class: "mySlides", style: "width: 100%"%>
+    <%= image_tag "Phuket_Slide2.jpg", class: "mySlides", style: "width: 100%"%>
+    <%= image_tag "Perhentian_Slide3.jpg", class: "mySlides", style: "width: 100%" %>
+    <%= image_tag "Langkawi_Slide4.jpg", class: "mySlides", style: "width: 100%" %>
+    <%= image_tag "Koh Samui_Slide5.jpg", class: "mySlides", style: "width: 100%" %>
+    </div>
+
+    <div class="body-para">
+    <h1><b>Southeast Asia Island Getaways</b></h1>
+    <h4>Find a Villa? Room? Hotel? Chalet?</h4>
+    </div>
+    
+  
+
+      <div class="flash">
+      <% flash.each do |key, value| -%>
+        <div id="flash_<%= key %>"><%=h value %></div>
+        <% end %>
+      </div>
+
+      <div class="error">
+      </div>
+  
+</div>

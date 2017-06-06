@@ -5,3 +5,47 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+user = {}
+user['password'] = 'asdfde'
+
+ActiveRecord::Base.transaction do
+  20.times do 
+    user['email'] = Faker::Internet.email
+    user['first_name'] = Faker::Name.first_name 
+    user['last_name'] = Faker::Name.last_name
+    user['phone'] = Faker::PhoneNumber.phone_number
+
+    User.create(user)
+  end
+end 
+
+# Seed Listings
+listing = {}
+uids = []
+User.all.each { |u| uids << u.id }
+
+
+ActiveRecord::Base.transaction do
+  40.times do 
+    listing['address1'] = Faker::Address.street_address
+    listing['address2'] = Faker::Address.street_address
+    listing['postcode'] = [rand(0..9),rand(0..9),rand(0..9),rand(0..9),rand(0..9)].join
+    listing['country'] = ["Malaysia", "Indonesia", "Thailand", "Singapore"].sample
+    listing['currency'] = ["MYR", "IDR", "THB", "SGD"].sample
+
+    listing['no_of_rooms'] = rand(1..10)
+    listing['no_of_beds'] = rand(1..15)
+    listing['no_of_bathrooms'] = rand(1..10)
+
+    listing['price_per_day'] = rand(80..500)
+    listing['price_per_week'] = rand(80..500)*7
+    listing['price_per_calendar_month'] = rand(80..500)*20
+    listing['islands'] = ['Langkawi','Tioman', 'Rawa', 'Perhentian', 'Redang', 'Layang-layang', 'Sipadan','Bali','Lombok','Phuket', 'Koh Samui', 'Koh Phi Phi', 'Koh Lanta', 'Batam'].sample
+    listing['smoking?'] = rand(0..1)
+    listing['Property_Name'] = Faker::App.name
+    listing['Property_Type'] = ["Villa", "Hotel", "Chalet", "Hostel"].sample
+    listing['user_id'] = uids.sample
+    Listing.create(listing)
+  end
+end
