@@ -22,7 +22,7 @@ gem 'kaminari'
 gem 'carrierwave'
 gem "mini_magick"
 gem "fog"
-
+gem 'rails_12factor'
 gem 'omniauth'
 gem 'omniauth-facebook'
 # Use postgresql as the database for Active Record
