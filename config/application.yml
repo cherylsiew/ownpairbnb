@@ -9,3 +9,6 @@ AWS_BUCKET_NAME: 'airbnbbucket'
 BRAINTREE_MERCHANT_ID: 'yfm9sg6fyzhzqmvy'
 BRAINTREE_PUBLIC_KEY: 'xcybgbgs84jf2tqc'
 BRAINTREE_PRIVATE_KEY: 'c6623e6f8538524f11e908216bc661c2'
+
+gmail_username: 'cheryl.siew.next@gmail.com'
+gmail_password: 'cswmn^6688'

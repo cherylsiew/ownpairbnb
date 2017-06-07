@@ -5,7 +5,7 @@
     <%= render partial: '/users/form', object: form %>
 
     <div class="password-field">
-      <%= form.label :password,class: 'white'%>
+      <%= form.label :password,class: 'black'%>
       <%= form.password_field :password, class: 'black'%>
     </div>
 
@@ -14,7 +14,7 @@
     </div>
 
     <div class="other-links">
-      <%= link_to t(".sign_in"), sign_in_path, class: 'white' %>
+      <%= link_to t(".sign_in"), sign_in_path, class: 'black' %>
     </div>
   <% end %>
 </div>
