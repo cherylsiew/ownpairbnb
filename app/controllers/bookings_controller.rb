@@ -15,6 +15,8 @@ class BookingsController < ApplicationController
 		@booking.total_price = @total_price
 
 		if @booking.save
+      BookingMailer.booking_email(current_user, @listing.user, @booking.id).deliver_now
+
 			redirect_to listing_booking_path(@listing,@booking) #@booking means booking show path, means show me this particular created booking
 		else
 			render "bookings/edit"
