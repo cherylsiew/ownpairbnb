@@ -13,6 +13,7 @@ gem 'figaro'
 gem 'braintree'
 gem 'sidekiq'
 
+
 #bootstrap
 gem 'bootstrap'
 gem 'bootstrap-sass'
