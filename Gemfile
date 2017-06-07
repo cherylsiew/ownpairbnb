@@ -11,7 +11,8 @@ gem 'rails', '~> 5.1.0'
 gem 'clearance'
 gem 'figaro'
 gem 'braintree'
-gem "letter_opener", :group => :development
+gem 'sidekiq'
+
 #bootstrap
 gem 'bootstrap'
 gem 'bootstrap-sass'
@@ -54,6 +55,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13.0'
   gem 'selenium-webdriver'
+  gem "letter_opener"
 end
 
 group :development do
