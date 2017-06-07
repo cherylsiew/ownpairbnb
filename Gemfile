@@ -11,6 +11,7 @@ gem 'rails', '~> 5.1.0'
 gem 'clearance'
 gem 'figaro'
 gem 'braintree'
+gem 'sidekiq'
 
 #bootstrap
 gem 'bootstrap'
