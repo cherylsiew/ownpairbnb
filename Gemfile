@@ -15,7 +15,7 @@ gem 'sidekiq'
 
 
 #bootstrap
-gem 'bootstrap'
+# gem 'bootstrap'
 gem 'bootstrap-sass'
 gem 'faker'
 gem 'kaminari'
