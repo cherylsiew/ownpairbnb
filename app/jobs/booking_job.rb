@@ -5,3 +5,4 @@ class BookingJob < ApplicationJob
     # Do something later
   end
 end
+
