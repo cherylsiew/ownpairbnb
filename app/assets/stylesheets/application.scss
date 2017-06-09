@@ -76,7 +76,7 @@
 .choice{
 	color: black;
 	font-family: Lato;
-	padding: 0px 10px 10px 10px;
+	padding: 5px 10px 10px 10px;
 }
 .choice select {
 	font-family: Lato;
@@ -117,16 +117,19 @@
 	height:30px;
 }
 
-
-.body-para{
-	text-align: center;
-	font-family: Lato;
-	font-weight: bold;
+.caption-padding{
+	position: absolute;
+	top: 30%;
+	left: 25%;
 	color: white;
-	margin: 0;
-  	position: absolute;
-  	top: 40%;
-  	left: 28%;
+	text-align: center;
+}
+
+.caption-padding h1{
+	font-family: Merriweather;
+}
+.caption-padding h3{
+	font-family: Merriweather;
 }
 
 .sign-up h2{

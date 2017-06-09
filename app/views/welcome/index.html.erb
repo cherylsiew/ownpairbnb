@@ -24,7 +24,6 @@
       <option value="Koh Lanta">Koh Lanta</option>
       <option value="Batam">Batam</option>
       </select>
-      </td>
       <td>Check In:</td>
       <td><input type="date"></td>
       <td>Check Out:</td>
@@ -36,18 +35,26 @@
   </div>
 
     <div class="slideshow">
-    <%= image_tag "Bali_Slide1.jpg",class: "mySlides", style: "width: 100%"%>
-    <%= image_tag "Phuket_Slide2.jpg", class: "mySlides", style: "width: 100%"%>
-    <%= image_tag "Perhentian_Slide3.jpg", class: "mySlides", style: "width: 100%" %>
-    <%= image_tag "Langkawi_Slide4.jpg", class: "mySlides", style: "width: 100%" %>
-    <%= image_tag "Koh Samui_Slide5.jpg", class: "mySlides", style: "width: 100%" %>
-    </div>
+      <div class="mySlides">
+        <%= image_tag "Bali_Slide1.jpg", style: "width: 100%"%>
+        <span class = "caption-padding"><h1>Discover Ayana at Sunset </h1><h3>Rooms from IDR 2 mil per night. Take 30% off your first night on us..</h3></span>
+      </div>
+ 
+      <div class="mySlides">
+        <%= image_tag "Phuket_Slide2.jpg", style: "width: 100%"%>
+        <span class = "caption-padding"><h1>Phuket..Where East Meets West</h1><h3>A journey of discovery..</h3></span>
+      </div>
 
-    <div class="body-para">
-    <h1><b>Southeast Asia Island Getaways</b></h1>
-    <h4>Find a Villa? Room? Hotel? Chalet?</h4>
+       <div class="mySlides">
+        <%= image_tag "Perhentian_Slide3.jpg", style: "width: 100%" %>
+        <span class = "caption-padding"><h1>Perhentian Island..A Tropical Paradise</h1><h3>A diver's haven..Book Now</h3></span>
+      </div>
+
+      <div class="mySlides">
+        <%= image_tag "Langkawi_Slide4.jpg",style: "width: 100%" %>
+        <span class = "caption-padding"><h1>The New St.Regis Langkawi</h1><h3>You cant ask for more..</h3></span>
+      </div>
     </div>
-    
   
 
       <div class="flash">
